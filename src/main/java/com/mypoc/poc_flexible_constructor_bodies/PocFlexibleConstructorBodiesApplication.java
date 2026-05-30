@@ -12,7 +12,7 @@ public class PocFlexibleConstructorBodiesApplication {
 
 		var request =
 				new FraudAnalysisRequest(
-						"123.456.789-01",
+						"123.456.789-01-XXX",
 						"Icaro Caetano  ",
 						"mobile",
 						"98.7",

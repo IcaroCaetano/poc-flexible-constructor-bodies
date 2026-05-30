@@ -30,7 +30,6 @@ public class FraudAnalysis {
             String personName,
             String source) {
 
-        // Convert to Uppercase
         cpf = cpf.replaceAll("\\D", "");
 
         personName = personName.trim();

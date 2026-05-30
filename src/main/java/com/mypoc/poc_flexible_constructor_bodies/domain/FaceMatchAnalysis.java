@@ -30,7 +30,6 @@ public class FaceMatchAnalysis extends FraudAnalysis {
             String source,
             String faceMatchScore) {
 
-        // Higieniza dentro do construtor
         cpf = cpf.replaceAll("\\D", "");
 
         personName = personName.trim();
