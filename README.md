@@ -22,3 +22,10 @@
                         └───service
                                 FraudAnalysisService.java
 ````
+
+Output:
+
+```
+Face Match Score: 98.7
+Liveness Score: 96.5
+````
