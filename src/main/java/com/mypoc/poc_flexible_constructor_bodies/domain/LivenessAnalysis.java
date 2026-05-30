@@ -2,17 +2,17 @@ package com.mypoc.poc_flexible_constructor_bodies.domain;
 
 import java.time.Instant;
 
-public class FaceMatchAnalysis extends FraudAnalysis {
+public class LivenessAnalysis extends FraudAnalysis {
 
-    private final double faceMatchScore;
+    private final double livenessScore;
 
-    private FaceMatchAnalysis(
+    private LivenessAnalysis(
             String analysisId,
             String cpf,
             String personName,
             String source,
             Instant createdAt,
-            double faceMatchScore) {
+            double livenessScore) {
 
         super(
                 analysisId,
@@ -21,27 +21,25 @@ public class FaceMatchAnalysis extends FraudAnalysis {
                 source,
                 createdAt);
 
-        this.faceMatchScore = faceMatchScore;
+        this.livenessScore = livenessScore;
     }
 
-    public FaceMatchAnalysis(
+    public LivenessAnalysis(
             String cpf,
             String personName,
             String source,
-            String faceMatchScore) {
+            String livenessScore) {
 
-        // Higieniza dentro do construtor
         cpf = cpf.replaceAll("\\D", "");
 
         personName = personName.trim();
 
         source = source.toUpperCase();
 
-        double score = Double.parseDouble(faceMatchScore);
+        double score = Double.parseDouble(livenessScore);
 
         if (score < 0 || score > 100) {
-            throw new IllegalArgumentException("Fac Match Score inválido");
-        }
+            throw new IllegalArgumentException("Liveness Score inválido");}
 
         this(
                 java.util.UUID.randomUUID().toString(),
@@ -53,9 +51,9 @@ public class FaceMatchAnalysis extends FraudAnalysis {
         );
     }
 
-    public double getFaceMatchScore() {
+    public double getLivenessScore() {
 
 
-        return faceMatchScore;
+        return livenessScore;
     }
 }
