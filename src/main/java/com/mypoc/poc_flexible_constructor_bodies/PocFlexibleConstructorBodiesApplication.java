@@ -1,13 +1,25 @@
 package com.mypoc.poc_flexible_constructor_bodies;
 
+import com.mypoc.poc_flexible_constructor_bodies.dto.FraudAnalysisRequest;
+import com.mypoc.poc_flexible_constructor_bodies.service.FraudAnalysisService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+
 public class PocFlexibleConstructorBodiesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PocFlexibleConstructorBodiesApplication.class, args);
+
+		var request =
+				new FraudAnalysisRequest(
+						"123.456.789-01",
+						"Icaro Caetano  ",
+						"mobile",
+						"98.7",
+						"96.5"
+				);
+
+		new FraudAnalysisService().analyze(request);
 	}
 
 }
