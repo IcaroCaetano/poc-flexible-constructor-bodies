@@ -1,6 +1,6 @@
 # poc-flexible-constructor-bodies
 
-
+In Java 25, you can execute code before another constructor call, as long as you don't access the state of the uninitialized instance.
 
 ```
 └───src
