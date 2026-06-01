@@ -4,6 +4,8 @@ In Java 25, you can execute code before another constructor call, as long as you
 
 This opens up space for validations, normalizations, and parameter transformations before delegation to another constructor.
 
+Architecture
+
 ```
 └───src
     ├───main
@@ -24,6 +26,11 @@ This opens up space for validations, normalizations, and parameter transformatio
                         └───service
                                 FraudAnalysisService.java
 ````
+
+With Flexible Constructor Bodies
+
+Now we can prepare the parameters before delegation.
+
 
 Output:
 
