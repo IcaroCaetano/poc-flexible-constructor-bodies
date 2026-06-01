@@ -2,6 +2,8 @@
 
 In Java 25, you can execute code before another constructor call, as long as you don't access the state of the uninitialized instance.
 
+This opens up space for validations, normalizations, and parameter transformations before delegation to another constructor.
+
 ```
 └───src
     ├───main
