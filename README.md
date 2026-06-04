@@ -89,6 +89,12 @@ In other words:
 
 It is no longer necessary to use a static helper method to construct an object.
 
+#### Note
+As we know, the first instruction in a constructor is `super`. 
+The instance of the parent class should always be constructed before the instance of the class that inherits from it. 
+With this new feature in Java 25, we don't need to use static methods to determine instance values, because we can do 
+this before defining `super` and pass the necessary values to its constructor.
+
 Output:
 
 ```
