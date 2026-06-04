@@ -87,6 +87,8 @@ In other words:
 - reduced readability;
 - difficulty in debugging.
 
+It is no longer necessary to use a static helper method to construct an object.
+
 Output:
 
 ```
