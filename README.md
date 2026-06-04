@@ -60,8 +60,32 @@ This wouldn't compile.
 
 You were forced to do something artificial:
 
+````java
+public Customer(String cpf) {
+    super(validateAndNormalize(cpf));
+}
+````
 
+where:
 
+````java
+private static String validateAndNormalize(String cpf) {
+    String normalizedCpf = cpf.replaceAll("\\D", "");
+
+    if (normalizedCpf.length() != 11) {
+        throw new IllegalArgumentException();
+    }
+
+    return normalizedCpf;
+}
+````
+
+In other words:
+
+- scattered logic;
+- auxiliary methods with no business value;
+- reduced readability;
+- difficulty in debugging.
 
 Output:
 
