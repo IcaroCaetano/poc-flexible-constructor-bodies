@@ -53,18 +53,22 @@ public class FraudAnalysis {
     }
 
     public String getAnalysisId() {
+
         return analysisId;
     }
 
     public String getCpf() {
+
         return cpf;
     }
 
     public String getPersonName() {
+
         return personName;
     }
 
     public String getSource() {
+
         return source;
     }
 
